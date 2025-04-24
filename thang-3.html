@@ -1,17 +1,162 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tháng 3</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Chiếc máy in đầu tiên – Nền móng của thời đại tri thức</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          font-family: 'EB Garamond', serif; /* Phông chữ cổ điển hơn */
+          background-image: url('assets/images/h8.jpg');
+          background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ nền */
+          background-repeat: no-repeat; /* Ngăn hình ảnh lặp lại */
+          background-position: center center; /* Căn giữa hình ảnh nền */
+          color: #333; /* Màu chữ tối hơn, dễ đọc trên nền ảnh */
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 20px;
+      }
+    
+      .container {
+          max-width: 900px;
+          background: rgba(255, 255, 255, 0.7); /* Nền trắng nhạt hơn cho chữ dễ đọc */
+          border: 1px solid rgba(0, 0, 0, 0.1); /* Viền nhạt */
+          border-radius: 8px;
+          padding: 40px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bóng nhẹ */
+      }
+      h1 {
+          font-family: 'Playfair Display', serif;
+          font-size: 2.5em; /* Chữ chủ đề lớn hơn */
+          color: #073c86; /* Màu nâu (saddlebrown) */
+          margin-bottom: 30px; /* Khoảng cách dưới rộng hơn */
+          text-align: center;
+          animation: fadeInDown 1s ease-out;
+      }
+      p {
+          font-size: 1.1em;
+          line-height: 1.7; /* Khoảng cách dòng vừa phải */
+          color: #555; /* Màu xám nhạt hơn */
+          text-align: justify;
+          animation: fadeIn 2s ease-in;
+          margin-bottom: 15px; /* Khoảng cách giữa các đoạn */
+      }
+      .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+      }
+      .image-wrapper {
+          flex: 1;
+          margin: 0 10px;
+          text-align: center;
+      }
+      .image-wrapper img {
+          max-width: 70%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng nhẹ cho ảnh */
+      }
+      .image-caption {
+          font-size: 0.9em;
+          color: #777;
+          margin-top: 5px;
+          text-align: center;
+      }
+      a {
+          display: inline-block;
+          margin-top: 30px;
+          text-decoration: none;
+          background-color: #8b4513; /* Màu nâu (saddlebrown) */
+          color: #fff;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+          animation: fadeInUp 2.5s;
+      }
+      a:hover {
+          background-color: #654321; /* Nâu đậm hơn khi hover */
+      }
+  
+      /* Animation effects */
+      @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
+      @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+  
+      /* Responsive */
+      @media (max-width: 600px) {
+          h1 {
+              font-size: 2em;
+              margin-bottom: 20px;
+          }
+          p {
+              font-size: 1em;
+              line-height: 1.6;
+              margin-bottom: 10px;
+          }
+          .container {
+              padding: 25px;
+          }
+          .image-container {
+              flex-direction: column; /* Chuyển ảnh xuống dòng khi màn hình nhỏ */
+          }
+          .image-wrapper {
+              margin: 10px 0;
+          }
+          .image-wrapper img {
+              max-width: 90%;
+          }
+      }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Tháng 3: Tiêu đề mẫu</h1>
-    <img src="assets/images/demo.jpg" alt="Ảnh minh họa" width="100%" />
-    <p>Đây là nội dung mẫu cho tháng 3. Bạn có thể thay đổi nội dung này theo lịch sử ngành bạn muốn thể hiện.</p>
-    <a href="index.html">← Quay về trang chủ</a>
-  </div>
+    <div class="overlay">
+        <div class="container">
+            <h1>CHIẾC MÁY IN ĐẦU TIÊN</h1>
+            <P>
+              <span style="font-size: 1.3em; font-weight: bold; color: #8b4513;">Nền móng của thời đại tri thức</span>
+          </P>
+            <p>
+              Chiếc máy in đầu tiên do Johannes Gutenberg sáng chế vào khoảng năm 1440 tại Mainz, Đức, đã trở thành một trong những phát minh vĩ đại nhất trong lịch sử nhân loại. Trước khi có máy in, việc sao chép tài liệu chủ yếu được thực hiện thủ công, tốn nhiều thời gian và chi phí, khiến cho tri thức trở nên khan hiếm và chỉ có thể tiếp cận được với một số ít người. Phát minh của ông đã thay đổi hoàn toàn cục diện này. Cốt lõi của công nghệ mà Gutenberg sáng tạo là sự kết hợp giữa máy ép trục vít, lấy cảm hứng từ ngành làm rượu, với các con chữ rời đúc bằng hợp kim chì, có thể tái sử dụng nhiều lần. Mực in đặc biệt được phát minh cho phép mực bám chắc lên giấy, tạo ra những bản in chất lượng cao, nhanh chóng và đồng đều. Đây là bước ngoặt không chỉ về mặt kỹ thuật mà còn về tư duy hệ thống, giúp tri thức được nhân bản với tốc độ nhanh chóng và dễ dàng tiếp cận hơn bao giờ hết.            
+            </p>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="assets/images/h14.jpg" alt="Johannes Gutenberg">
+                    <p class="image-caption">Johannes Gutenberg</p>
+                </div>
+            </div>
+            <p>
+              Thành tựu đầu tiên của kỹ thuật này là cuốn kinh thánh Gutenberg với hơn 1.200 trang, cuốn kinh thánh này được in bằng phông chữ Blackletter đặc trưng của thời trung cổ, kết hợp giữa in máy và trang trí thủ công tinh xảo. Cuốn sách này không chỉ là một công trình kỹ thuật hoàn hảo mà còn là một tác phẩm nghệ thuật, minh chứng cho khả năng kết hợp giữa công nghệ in ấn và nghệ thuật thủ công truyền thống. Chính sự kết hợp này đã đưa in ấn vào một giai đoạn mới, đồng thời mở ra cánh cửa cho cuộc cách mạng tri thức, góp phần đưa đến sự ra đời của thời kỳ Phục Hưng, cải cách tôn giáo.
+              Chiếc máy in của Gutenberg không chỉ thay đổi cách sản xuất sách mà còn mở đường cho sự phát triển của ngành xuất bản, báo chí, giáo dục và truyền thông. Tri thức không còn bị giới hạn trong các lớp người tinh hoa mà trở thành tài sản chung, dễ tiếp cận với mọi tầng lớp. Các nhà khoa học và triết gia như Copernicus, Galileo và Newton có thể dễ dàng truyền tải công trình của mình đến cộng đồng học thuật và đại chúng, làm nên những bước tiến lớn trong lĩnh vực khoa học và tư tưởng.            </p>
+              <div class="image-wrapper">
+                <img src="assets/images/h13.jpg" alt="chiếc máy in đầu tiên của Gutenberg">
+                <p class="image-caption">chiếc máy in đầu tiên của Gutenberg</p>
+            </div>
+            <p>
+              Dù công nghệ in hiện đại đã phát triển vượt bậc nhưng chiếc máy in đầu tiên của Gutenberg vẫn là biểu tượng khởi đầu vĩ đại. Các bản sao của máy được phục dựng và trưng bày tại nhiều bảo tàng, trường đại học nhằm giáo dục thế hệ sau về vai trò của in ấn trong lịch sử nhân loại. Đây không chỉ là một phát minh công nghệ, mà còn là nền tảng tư tưởng cho thời đại tri thức được lan tỏa rộng rãi.            
+            </p>
+            <a href="index.html">&larr; Quay về trang chủ</a>
+            <a href="thang-4.html">Trang kế &rarr;</a>
+        </div>
+    </div>
 </body>
 </html>

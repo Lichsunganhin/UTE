@@ -1,17 +1,175 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tháng 10</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kỹ thuật in Flexo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          font-family: 'EB Garamond', serif; /* Phông chữ cổ điển hơn */
+          background-image: url('assets/images/h8.jpg');
+          background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ nền */
+          background-repeat: no-repeat; /* Ngăn hình ảnh lặp lại */
+          background-position: center center; /* Căn giữa hình ảnh nền */
+          color: #333; /* Màu chữ tối hơn, dễ đọc trên nền ảnh */
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 20px;
+      }
+    
+      .container {
+          max-width: 900px;
+          background: rgba(255, 255, 255, 0.7); /* Nền trắng nhạt hơn cho chữ dễ đọc */
+          border: 1px solid rgba(0, 0, 0, 0.1); /* Viền nhạt */
+          border-radius: 8px;
+          padding: 40px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bóng nhẹ */
+      }
+      h1 {
+          font-family: 'Playfair Display', serif;
+          font-size: 2.5em; /* Chữ chủ đề lớn hơn */
+          color: #073c86; /* Màu nâu (saddlebrown) */
+          margin-bottom: 30px; /* Khoảng cách dưới rộng hơn */
+          text-align: center;
+          animation: fadeInDown 1s ease-out;
+      }
+      p {
+          font-size: 1.1em;
+          line-height: 1.7; /* Khoảng cách dòng vừa phải */
+          color: #555; /* Màu xám nhạt hơn */
+          text-align: justify;
+          animation: fadeIn 2s ease-in;
+          margin-bottom: 15px; /* Khoảng cách giữa các đoạn */
+      }
+      .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+      }
+      .image-wrapper {
+          flex: 1;
+          margin: 0 10px;
+          text-align: center;
+      }
+      .image-wrapper img {
+          max-width: 70%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng nhẹ cho ảnh */
+      }
+      .image-caption {
+          font-size: 0.9em;
+          color: #777;
+          margin-top: 5px;
+          text-align: center;
+      }
+      a {
+          display: inline-block;
+          margin-top: 30px;
+          text-decoration: none;
+          background-color: #8b4513; /* Màu nâu (saddlebrown) */
+          color: #fff;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+          animation: fadeInUp 2.5s;
+      }
+      a:hover {
+          background-color: #654321; /* Nâu đậm hơn khi hover */
+      }
+  
+      /* Animation effects */
+      @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
+      @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+  
+      /* Responsive */
+      @media (max-width: 600px) {
+          h1 {
+              font-size: 2em;
+              margin-bottom: 20px;
+          }
+          p {
+              font-size: 1em;
+              line-height: 1.6;
+              margin-bottom: 10px;
+          }
+          .container {
+              padding: 25px;
+          }
+          .image-container {
+              flex-direction: column; /* Chuyển ảnh xuống dòng khi màn hình nhỏ */
+          }
+          .image-wrapper {
+              margin: 10px 0;
+          }
+          .image-wrapper img {
+              max-width: 90%;
+          }
+      }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Tháng 10: Tiêu đề mẫu</h1>
-    <img src="assets/images/demo.jpg" alt="Ảnh minh họa" width="100%" />
-    <p>Đây là nội dung mẫu cho tháng 10. Bạn có thể thay đổi nội dung này theo lịch sử ngành bạn muốn thể hiện.</p>
-    <a href="index.html">← Quay về trang chủ</a>
-  </div>
+    <div class="overlay">
+        <div class="container">
+            <h1>QUÁ TRÌNH SẢN XUẤT IN</h1>
+            <P>
+              <span style="font-size: 1.3em; font-weight: bold; color: #8b4513;">Tối ưu hóa quy trình, đảm bảo chất lượng trên từng ấn phẩm</span>
+          </P>
+            <p>
+              Quá trình sản xuất in là một chuỗi hoạt động khép kín, bao gồm ba giai đoạn chính: chế bản (prepress), in ấn (press) và sau in (postpress). Trong môi trường sản xuất hiện đại, toàn bộ quy trình này không chỉ được số hóa mà còn được kết nối bằng hệ thống quản lý thông minh, tạo thành một “nhà máy in thông minh – Smart Print Factory” nơi tất cả dữ liệu in được giám sát và điều phối theo thời gian thực.
+             </p>
+            <p>
+              Ở giai đoạn đầu tiên – thiết kế và chế bản – nhân viên chế bản sử dụng các phần mềm đồ họa chuyên dụng như Adobe Illustrator, InDesign, Photoshop hoặc Acrobat để tạo hình vecto, xử lý hình ảnh, dàn trang và xuất file in. Đối với thiết kế bao bì hộp giấy, phần mềm ArtiosCAD thường được sử dụng để thiết kế cấu trúc sản phẩm, phần mềm đặc biệt hiệu quả trong việc tạo mẫu hộp giấy và carton nhờ thư viện mẫu phong phú và khả năng dựng hình 3D trực quan.
+            </p>
+            <p>
+              Phần mềm còn cho phép tối ưu hóa thiết kế cho sản xuất, hỗ trợ trực tiếp các công đoạn như làm khuôn bế, cắt và dán hộp. nhằm tối ưu hóa cho công đoạn làm khuôn cấn bế ở bước sau. Nhờ sự tích hợp của trí tuệ nhân tạo (AI) và công nghệ dữ liệu đám mây, nhiều thao tác như xử lý file, kiểm tra lỗi, tự động canh lề và tạo mã QR có thể được thực hiện một cách nhanh chóng và chính xác. Sau cùng, hệ thống CTP (Computer to Plate) hoặc RIP (Raster Image Processor) cho phép chuyển đổi trực tiếp file thiết kế thành bản in trên kẽm, film hoặc bản lưới, giúp rút ngắn đáng kể thời gian chuẩn bị in.
+            </p>
+              <div class="image-wrapper">
+                <img src="assets/images/h40.jpg" alt="Mô hình quản lý in">
+                <p class="image-caption">Quy trình in</p>
+            </div>
+            <p>
+              Ở giai đoạn in, công nghệ được lựa chọn dựa trên mục đích sử dụng: in offset cho sách báo, tạp chí và bao bì giấy; in flexo cho nhãn hàng, bao bì cuộn và hộp carton; in ống đồng cho bao bì mềm chất lượng cao; và in kỹ thuật số cho đơn hàng nhỏ, sản phẩm cá nhân hóa hoặc in nhanh. Các hệ thống máy in hiện đại như Heidelberg Speedmaster XL (in offset đến 18.000 tờ/giờ), HP Indigo (in số lượng nhỏ chất lượng cao), hay Bobst Master CI Flexo (in flexo tốc độ cao) đều tích hợp cảm biến kiểm tra màu, camera soi lỗi AI, và hệ thống tự động điều chỉnh mực – giúp duy trì chất lượng đồng đều, giảm thiểu phế phẩm và tiết kiệm chi phí sản xuất.
+            </p>
+            <div class="image-container">
+              <div class="image-wrapper">
+                  <img src="assets/images/h41.jpg" alt="Sơ đồ quy trình sản xuất in">
+                  <p class="image-caption">Sơ đồ quy trình chế bản</p>
+              </div>
+          </div>
+            <P>
+              Giai đoạn sau in (postpress) gồm nhiều công đoạn đa dạng như cán màng, tráng phủ, dập nổi, ép nhũ, phủ UV, bế khuôn, gấp dán, đóng cuốn, giúp hoàn thiện sản phẩm về mặt hình thức và chức năng. Các dây chuyền hiện nay sử dụng robot gắp sản phẩm, hệ thống căn chỉnh tự động và quản lý năng suất bằng mã vạch, mã QR, nâng cao độ chính xác và tốc độ xử lý.
+              Bên cạnh đó, ngành in hiện đại cũng đang đồng hành với xu hướng phát triển bền vững, thông qua việc sử dụng mực sinh học, dung môi gốc nước, vật liệu tái chế, màng cán phân hủy sinh học và quy trình in không phát thải. Công nghệ in thông minh còn cho phép tích hợp giải pháp truy xuất nguồn gốc, mã QR động, mã vạch biến đổi dữ liệu, biến ấn phẩm in thành một phần của hệ thống số hóa chuỗi cung ứng và marketing tương tác.
+              </P>
+          <p>
+            Tổng thể, quá trình sản xuất in ngày nay không chỉ là sự phối hợp giữa kỹ thuật và máy móc, mà là một hệ sinh thái số hóa – tự động – kết nối toàn diện, đóng vai trò quan trọng trong các chiến lược sản xuất linh hoạt, cá nhân hóa và bền vững.
+            <div class="image-wrapper">
+              <img src="assets/images/h42.jpg" alt="Mô hình quản lý in">
+              <p class="image-caption">Sơ đồ quá trình sản xuất in</p>
+          </div>
+          </p>
+            <a href="index.html">&larr; Quay về trang chủ</a>
+        </div>
+    </div>
 </body>
 </html>

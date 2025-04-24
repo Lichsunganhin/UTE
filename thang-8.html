@@ -1,17 +1,174 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tháng 8</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kỹ thuật in Flexo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          font-family: 'EB Garamond', serif; /* Phông chữ cổ điển hơn */
+          background-image: url('assets/images/h8.jpg');
+          background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ nền */
+          background-repeat: no-repeat; /* Ngăn hình ảnh lặp lại */
+          background-position: center center; /* Căn giữa hình ảnh nền */
+          color: #333; /* Màu chữ tối hơn, dễ đọc trên nền ảnh */
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 20px;
+      }
+    
+      .container {
+          max-width: 900px;
+          background: rgba(255, 255, 255, 0.7); /* Nền trắng nhạt hơn cho chữ dễ đọc */
+          border: 1px solid rgba(0, 0, 0, 0.1); /* Viền nhạt */
+          border-radius: 8px;
+          padding: 40px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bóng nhẹ */
+      }
+      h1 {
+          font-family: 'Playfair Display', serif;
+          font-size: 2.5em; /* Chữ chủ đề lớn hơn */
+          color: #073c86; /* Màu nâu (saddlebrown) */
+          margin-bottom: 30px; /* Khoảng cách dưới rộng hơn */
+          text-align: center;
+          animation: fadeInDown 1s ease-out;
+      }
+      p {
+          font-size: 1.1em;
+          line-height: 1.7; /* Khoảng cách dòng vừa phải */
+          color: #555; /* Màu xám nhạt hơn */
+          text-align: justify;
+          animation: fadeIn 2s ease-in;
+          margin-bottom: 15px; /* Khoảng cách giữa các đoạn */
+      }
+      .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+      }
+      .image-wrapper {
+          flex: 1;
+          margin: 0 10px;
+          text-align: center;
+      }
+      .image-wrapper img {
+          max-width: 60%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng nhẹ cho ảnh */
+      }
+      .image-caption {
+          font-size: 0.9em;
+          color: #777;
+          margin-top: 5px;
+          text-align: center;
+      }
+      a {
+          display: inline-block;
+          margin-top: 30px;
+          text-decoration: none;
+          background-color: #8b4513; /* Màu nâu (saddlebrown) */
+          color: #fff;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+          animation: fadeInUp 2.5s;
+      }
+      a:hover {
+          background-color: #654321; /* Nâu đậm hơn khi hover */
+      }
+  
+      /* Animation effects */
+      @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
+      @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+  
+      /* Responsive */
+      @media (max-width: 600px) {
+          h1 {
+              font-size: 2em;
+              margin-bottom: 20px;
+          }
+          p {
+              font-size: 1em;
+              line-height: 1.6;
+              margin-bottom: 10px;
+          }
+          .container {
+              padding: 25px;
+          }
+          .image-container {
+              flex-direction: column; /* Chuyển ảnh xuống dòng khi màn hình nhỏ */
+          }
+          .image-wrapper {
+              margin: 10px 0;
+          }
+          .image-wrapper img {
+              max-width: 90%;
+          }
+      }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Tháng 8: Tiêu đề mẫu</h1>
-    <img src="assets/images/demo.jpg" alt="Ảnh minh họa" width="100%" />
-    <p>Đây là nội dung mẫu cho tháng 8. Bạn có thể thay đổi nội dung này theo lịch sử ngành bạn muốn thể hiện.</p>
-    <a href="index.html">← Quay về trang chủ</a>
-  </div>
+    <div class="overlay">
+        <div class="container">
+            <h1>IN KỸ THUẬT SỐ (DIGITAL PRINTING)</h1>
+            <P>
+              <span style="font-size: 1.3em; font-weight: bold; color: #8b4513;">Cá nhân hóa dễ dàng, tạo sự khác biệt cho từng sản phẩm.</span>
+          </P>
+            <p>
+              In kỹ thuật số (Digital Printing), hay còn gọi là in không tiếp xúc (NIP – Non Impact Printing), là một bước đột phá trong ngành in ấn hiện đại. Không giống các kỹ thuật in truyền thống như offset, ống đồng hay flexo vốn cần khuôn hoặc bản in, in kỹ thuật số sử dụng dữ liệu số để in trực tiếp lên bề mặt vật liệu, thường thông qua tĩnh điện, mực phun (inkjet) hoặc hệ thống truyền nhiệt,… Điều này giúp loại bỏ hoàn toàn bước chế bản, rút ngắn thời gian chuẩn bị và cho phép in số lượng nhỏ với nội dung thay đổi linh hoạt theo từng sản phẩm – một ưu điểm nổi bật trong thời đại cá nhân hóa và in theo nhu cầu.
+            </p>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="assets/images/h30.jpg" alt="Công nghệ in kỹ thuật số">
+                    <p class="image-caption">Công nghệ in kỹ thuật số</p>
+                </div>
+            </div>
+            <p>
+              Ứng dụng của in kỹ thuật số rất rộng, từ in nhanh tài liệu văn phòng, in sách theo yêu cầu, tem nhãn, hóa đơn, cho đến bao bì, nhãn hàng và cả bao bì phức hợp. Đặc biệt, in kỹ thuật số đang làm thay đổi mạnh mẽ ngành bao bì và nhãn hàng khi cho phép sản xuất hàng loạt đơn hàng nhỏ, in tên cá nhân, mã vạch, QR code, hoặc hình ảnh thay đổi theo từng đơn vị sản phẩm – mở ra kỷ nguyên "mass customization".
+            </p>
+              <div class="image-wrapper">
+                <img src="assets/images/h31.jpg" alt="Công nghệ in kỹ thuật số">
+                <p class="image-caption">Máy in kỹ thuật số</p>
+            </div>
+            <p>
+              Trong vài năm gần đây, công nghệ Digital Hybrid Press – kết hợp giữa in kỹ thuật số và in truyền thống (offset, flexo, ống đồng) – đã xuất hiện, giúp tận dụng ưu điểm của cả hai phương pháp: tốc độ cao, chất lượng ổn định và khả năng cá nhân hóa. Những tên tuổi lớn như HP Indigo, Xeikon, Canon, Heidelberg và Landa đang dẫn đầu trong lĩnh vực này. Riêng công nghệ Landa Nanography được xem là một bước tiến đột phá, sử dụng các hạt mực nano siêu nhỏ giúp tăng độ phân giải, độ phủ màu cao hơn cả offset truyền thống, lại thân thiện với môi trường nhờ giảm thiểu lượng mực và năng lượng tiêu thụ.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/h32.jpg" alt="Công nghệ in kỹ thuật số">
+              <p class="image-caption">Máy in kỹ thuật số</p>
+          </div>
+          <p>
+            Một xu hướng mới là tích hợp in kỹ thuật số vào dây chuyền sản xuất thông minh với khả năng kết nối dữ liệu qua IoT, tự động nhận lệnh in, phân tích và tối ưu hoá quy trình theo thời gian thực. Điều này đặc biệt phù hợp với mô hình sản xuất linh hoạt, đáp ứng nhanh thị trường và nhu cầu tùy biến cao.
+Nhờ khả năng linh hoạt, tiết kiệm chi phí ở mức in nhỏ, và hỗ trợ dữ liệu biến đổi, in kỹ thuật số không chỉ là giải pháp thay thế cho in truyền thống trong một số lĩnh vực mà còn mở ra những hướng đi hoàn toàn mới trong in ấn cá nhân hoá, sản xuất bao bì thông minh, và kết nối chuỗi giá trị số.
+          </p>
+          <div class="image-wrapper">
+            <img src="assets/images/h33.jpg" alt="Công nghệ in kỹ thuật số">
+            <p class="image-caption">Công nghệ in kỹ thuật số</p>
+        </div>
+            <a href="index.html">&larr; Quay về trang chủ</a>
+            <a href="thang-9.html">Trang kế &rarr;</a>
+        </div>
+    </div>
 </body>
 </html>

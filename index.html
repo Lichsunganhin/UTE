@@ -1,24 +1,109 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <title>Lịch sử ngành</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lịch sử ngành in </title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'EB Garamond', serif;
+            background-image: url('assets/images/h8.jpg'); /* Hình nền giấy cổ */
+            background-size: cover;
+            background-position: center;
+            color: #555; /* Màu chữ nâu sẫm */
+            text-align: center;
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin-bottom: 60px;
+            color: #8B4513; /* Màu nâu đất */
+            text-shadow: 2px 2px #d3d3d3;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Tự động điều chỉnh số cột */
+            gap: 30px;
+        }
+
+        li {
+            background: rgba(255, 255, 255, 0.8); /* Nền trắng mờ */
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #dcdcdc;
+        }
+
+        li:hover {
+            transform: translateY(-8px);
+            box-shadow: 8px 8px 20px rgba(0,0,0,0.3);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        a {
+            text-decoration: none;
+            color: #A0522D; /* Màu nâu đỏ */
+            font-weight: bold;
+            font-size: 1.2em;
+            display: block; /* Để toàn bộ khối li là link */
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #8B4513;
+        }
+
+        /* Hình ảnh trang trí */
+        .decorative-image-top, .decorative-image-bottom {
+            position: absolute;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        .decorative-image-top {
+            top: 10px;
+            left: 10px;
+            max-width: 150px;
+            transform: rotate(-10deg);
+        }
+
+        .decorative-image-bottom {
+            bottom: 10px;
+            right: 10px;
+            max-width: 180px;
+            transform: rotate(15deg);
+        }
+    </style>
 </head>
 <body>
-  <h1>Lịch sử ngành qua 12 tháng</h1>
-  <ul>
-    <li><a href="thang-1.html">Tháng 1</a></li>
-    <li><a href="thang-2.html">Tháng 2</a></li>
-    <li><a href="thang-3.html">Tháng 3</a></li>
-    <li><a href="thang-4.html">Tháng 4</a></li>
-    <li><a href="thang-5.html">Tháng 5</a></li>
-    <li><a href="thang-6.html">Tháng 6</a></li>
-    <li><a href="thang-7.html">Tháng 7</a></li>
-    <li><a href="thang-8.html">Tháng 8</a></li>
-    <li><a href="thang-9.html">Tháng 9</a></li>
-    <li><a href="thang-10.html">Tháng 10</a></li>
-    <li><a href="thang-11.html">Tháng 11</a></li>
-    <li><a href="thang-12.html">Tháng 12</a></li>
-  </ul>
+    <img src="assets/images/quill-top.png" alt="" class="decorative-image-top">
+    <h1>LỊCH SỬ NGÀNH IN ẤN</h1>
+    <ul>
+        <li><a href="thang-1.html">KỸ THUẬT IN KHẮC GỖ</a></li>
+        <li><a href="thang-2.html">KỸ THUẬT IN TYPO</a></li>
+        <li><a href="thang-3.html">CHIẾC MÁY IN ĐẦU TIÊN</a></li>
+        <li><a href="thang-4.html">KỸ THUẬT IN ỐNG ĐỒNG</a></li>
+        <li><a href="thang-5.html">KỸ THUẬT IN OFFSET</a></li>
+        <li><a href="thang-6.html">KỸ THUẬT IN LƯỚI</a></li>
+        <li><a href="thang-7.html">KỸ THUẬT IN FLEXO</a></li>
+        <li><a href="thang-8.html">IN KỸ THUẬT SỐ</a></li>
+        <li><a href="thang-9.html">CÔNG NGHỆ IN 3D</a></li>
+        <li><a href="thang-10.html">QUÁ TRÌNH SẢN XUẤT IN</a></li>
+    </ul>
+    <img src="assets/images/printing-press-bottom.png" alt="" class="decorative-image-bottom">
 </body>
 </html>

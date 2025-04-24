@@ -1,17 +1,172 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tháng 6</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>KỸ THUẬT IN LƯỚI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          font-family: 'EB Garamond', serif; /* Phông chữ cổ điển hơn */
+          background-image: url('assets/images/h8.jpg');
+          background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ nền */
+          background-repeat: no-repeat; /* Ngăn hình ảnh lặp lại */
+          background-position: center center; /* Căn giữa hình ảnh nền */
+          color: #333; /* Màu chữ tối hơn, dễ đọc trên nền ảnh */
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 20px;
+      }
+    
+      .container {
+          max-width: 900px;
+          background: rgba(255, 255, 255, 0.7); /* Nền trắng nhạt hơn cho chữ dễ đọc */
+          border: 1px solid rgba(0, 0, 0, 0.1); /* Viền nhạt */
+          border-radius: 8px;
+          padding: 40px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bóng nhẹ */
+      }
+      h1 {
+          font-family: 'Playfair Display', serif;
+          font-size: 2.5em; /* Chữ chủ đề lớn hơn */
+          color: #073c86; /* Màu nâu (saddlebrown) */
+          margin-bottom: 30px; /* Khoảng cách dưới rộng hơn */
+          text-align: center;
+          animation: fadeInDown 1s ease-out;
+      }
+      p {
+          font-size: 1.1em;
+          line-height: 1.7; /* Khoảng cách dòng vừa phải */
+          color: #555; /* Màu xám nhạt hơn */
+          text-align: justify;
+          animation: fadeIn 2s ease-in;
+          margin-bottom: 15px; /* Khoảng cách giữa các đoạn */
+      }
+      .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+      }
+      .image-wrapper {
+          flex: 1;
+          margin: 0 10px;
+          text-align: center;
+      }
+      .image-wrapper img {
+          max-width: 60%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng nhẹ cho ảnh */
+      }
+      .image-caption {
+          font-size: 0.9em;
+          color: #777;
+          margin-top: 5px;
+          text-align: center;
+      }
+      a {
+          display: inline-block;
+          margin-top: 30px;
+          text-decoration: none;
+          background-color: #8b4513; /* Màu nâu (saddlebrown) */
+          color: #fff;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+          animation: fadeInUp 2.5s;
+      }
+      a:hover {
+          background-color: #654321; /* Nâu đậm hơn khi hover */
+      }
+  
+      /* Animation effects */
+      @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
+      @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+  
+      /* Responsive */
+      @media (max-width: 600px) {
+          h1 {
+              font-size: 2em;
+              margin-bottom: 20px;
+          }
+          p {
+              font-size: 1em;
+              line-height: 1.6;
+              margin-bottom: 10px;
+          }
+          .container {
+              padding: 25px;
+          }
+          .image-container {
+              flex-direction: column; /* Chuyển ảnh xuống dòng khi màn hình nhỏ */
+          }
+          .image-wrapper {
+              margin: 10px 0;
+          }
+          .image-wrapper img {
+              max-width: 90%;
+          }
+      }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Tháng 6: Tiêu đề mẫu</h1>
-    <img src="assets/images/demo.jpg" alt="Ảnh minh họa" width="100%" />
-    <p>Đây là nội dung mẫu cho tháng 6. Bạn có thể thay đổi nội dung này theo lịch sử ngành bạn muốn thể hiện.</p>
-    <a href="index.html">← Quay về trang chủ</a>
-  </div>
+    <div class="overlay">
+        <div class="container">
+            <h1>KỸ THUẬT IN LƯỚI</h1>
+            <P>
+              <span style="font-size: 1.3em; font-weight: bold; color: #8b4513;">Giải pháp in ấn vượt trội cho mọi loại vật liệu</span>
+          </P>
+            <p>
+              In lưới hay còn gọi là in lụa, là một kỹ thuật in nổi sử dụng khuôn lưới để truyền mực lên bề mặt vật liệu. Nguyên lý hoạt động dựa trên việc phủ một lớp keo nhạy sáng lên toàn bộ bề mặt lưới. Sau đó, khuôn lưới được đem phơi sáng qua phim ảnh; những vùng không có hình ảnh sẽ được keo giữ lại, còn những vùng hình ảnh bị ánh sáng làm cứng sẽ được rửa trôi, tạo thành các lỗ lưới mở cho mực đi qua. Khi in, mực được gạt bằng lưỡi cao su xuyên qua các lỗ này và in lên vật liệu phía dưới. Ban đầu, lưới được làm từ sợi tơ tằm, nhưng ngày nay chủ yếu sử dụng polyester, nylon hoặc thép không gỉ để đáp ứng yêu cầu sản xuất công nghiệp hiện đại.
+             </p>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="assets/images/h23.jpg" alt="Nguyên lí in ống đồng">
+                    <p class="image-caption">Nguyên lí in lưới</p>
+                </div>
+            </div>
+            <p>
+              Ưu điểm nổi bật nhất của in lưới là khả năng in trên nhiều loại vật liệu, kể cả những bề mặt cong, nhám hoặc không đồng nhất – từ vải, gỗ, thủy tinh, kim loại, nhựa cho đến gốm sứ và cả mạch điện tử. Nhờ đó, kỹ thuật này được ứng dụng rộng rãi trong ngành in dệt may (áo thun, vải quảng cáo), in đồ thủ công nghệ thuật, in gốm sứ gia dụng, in nhựa định hình, in chai lọ thủy tinh,…            
+            </p>
+              <div class="image-wrapper">
+                <img src="assets/images/h24.jpg" alt="Kỹ thuật in lưới thủ công">
+                <p class="image-caption">Kỹ thuật in lưới thủ công</p>
+            </div>
+            <p>
+              Trong những năm gần đây, in lưới đã có nhiều bước tiến vượt bậc nhờ công nghệ tự động hóa và tích hợp số hóa. Các máy in lưới phẳng tự động khổ lớn, in lưới tròn (cylinder screen printing) và in lưới quay (rotary screen) cho phép vận hành liên tục, tốc độ cao và chính xác trên dây chuyền công nghiệp. Sự kết hợp với công nghệ UV giúp mực khô tức thì, đồng thời mở ra nhiều hiệu ứng đặc biệt như tráng phủ bóng, mờ, tráng phủ cát, mực nhũ kim, mực phát quang, mực nhiệt đổi màu,…Tạo ra các sản phẩm vừa độc đáo vừa bền đẹp.            
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/h25.jpg" alt="Kỹ thuật in lưới tự động">
+              <p class="image-caption">Kỹ thuật in lưới tự động</p>
+          </div>
+          <p>
+            Một trong những ứng dụng tiên tiến nhất hiện nay là in lưới vi mô trong ngành điện tử. Công nghệ này cho phép in các lớp mạch siêu mỏng lên vật liệu mềm, tạo thành mạch điện tử dẻo, cảm biến sinh học, màn hình OLED và lớp dẫn điện trong pin mặt trời. Ngoài ra, in lưới còn đóng vai trò trong in y tế, chẳng hạn như in các cảm biến theo dõi sinh học lên da hoặc vải y tế thông minh.        
+          </p>
+        <p>
+          Từ một kỹ thuật truyền thống mang tính thủ công, in lưới đang được tái định hình như một công nghệ in chính xác cao, có khả năng tạo ra các lớp phủ chức năng với chi phí hợp lý. Với sự kết hợp giữa linh hoạt – sáng tạo – công nghệ, in lưới tiếp tục khẳng định vai trò độc đáo trong hệ sinh thái in ấn hiện đại, không chỉ trong lĩnh vực quảng cáo hay dệt may mà còn lan tỏa đến các ngành công nghệ cao, y sinh và năng lượng tái tạo.
+        </p>
+            <a href="index.html">&larr; Quay về trang chủ</a>
+            <a href="thang-7.html">Trang kế &rarr;</a>
+        </div>
+    </div>
 </body>
 </html>

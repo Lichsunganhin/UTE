@@ -1,17 +1,172 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tháng 2</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kỹ thuật in Typo - Từ phát minh lịch sử đến nghệ thuật sắp chữ hiện đại</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          font-family: 'EB Garamond', serif; /* Phông chữ cổ điển hơn */
+          background-image: url('assets/images/h8.jpg');
+          background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ nền */
+          background-repeat: no-repeat; /* Ngăn hình ảnh lặp lại */
+          background-position: center center; /* Căn giữa hình ảnh nền */
+          color: #333; /* Màu chữ tối hơn, dễ đọc trên nền ảnh */
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 20px;
+      }
+    
+      .container {
+          max-width: 900px;
+          background: rgba(255, 255, 255, 0.7); /* Nền trắng nhạt hơn cho chữ dễ đọc */
+          border: 1px solid rgba(0, 0, 0, 0.1); /* Viền nhạt */
+          border-radius: 8px;
+          padding: 40px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bóng nhẹ */
+      }
+      h1 {
+          font-family: 'Playfair Display', serif;
+          font-size: 2.5em; /* Chữ chủ đề lớn hơn */
+          color: #073c86; /* Màu nâu (saddlebrown) */
+          margin-bottom: 30px; /* Khoảng cách dưới rộng hơn */
+          text-align: center;
+          animation: fadeInDown 1s ease-out;
+      }
+      p {
+          font-size: 1.1em;
+          line-height: 1.7; /* Khoảng cách dòng vừa phải */
+          color: #555; /* Màu xám nhạt hơn */
+          text-align: justify;
+          animation: fadeIn 2s ease-in;
+          margin-bottom: 15px; /* Khoảng cách giữa các đoạn */
+      }
+      .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+      }
+      .image-wrapper {
+          flex: 1;
+          margin: 0 10px;
+          text-align: center;
+      }
+      .image-wrapper img {
+          max-width: 70%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng nhẹ cho ảnh */
+      }
+      .image-caption {
+          font-size: 0.9em;
+          color: #777;
+          margin-top: 5px;
+          text-align: center;
+      }
+      a {
+          display: inline-block;
+          margin-top: 30px;
+          text-decoration: none;
+          background-color: #8b4513; /* Màu nâu (saddlebrown) */
+          color: #fff;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+          animation: fadeInUp 2.5s;
+      }
+      a:hover {
+          background-color: #654321; /* Nâu đậm hơn khi hover */
+      }
+  
+      /* Animation effects */
+      @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
+      @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+  
+      /* Responsive */
+      @media (max-width: 600px) {
+          h1 {
+              font-size: 2em;
+              margin-bottom: 20px;
+          }
+          p {
+              font-size: 1em;
+              line-height: 1.6;
+              margin-bottom: 10px;
+          }
+          .container {
+              padding: 25px;
+          }
+          .image-container {
+              flex-direction: column; /* Chuyển ảnh xuống dòng khi màn hình nhỏ */
+          }
+          .image-wrapper {
+              margin: 10px 0;
+          }
+          .image-wrapper img {
+              max-width: 90%;
+          }
+      }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Tháng 2: Tiêu đề mẫu</h1>
-    <img src="assets/images/demo.jpg" alt="Ảnh minh họa" width="100%" />
-    <p>Đây là nội dung mẫu cho tháng 2. Bạn có thể thay đổi nội dung này theo lịch sử ngành bạn muốn thể hiện.</p>
-    <a href="index.html">← Quay về trang chủ</a>
-  </div>
+    <div class="overlay">
+        <div class="container">
+            <h1>KỸ THUẬT IN TYPO</h1>
+            <P>
+              <span style="font-size: 1.3em; font-weight: bold; color: #8b4513;">Từ phát minh lịch sử đến nghệ thuật sắp chữ hiện đại</span>
+          </P>
+            <p>
+              Kỹ thuật in Typo là một bước ngoặt vĩ đại trong lịch sử in ấn, gắn liền với tên tuổi của Johannes Gutenberg – người được xem là cha đẻ của ngành in. Vào khoảng năm 1440, Gutenberg đã cải tiến kỹ thuật in bằng việc sử dụng các con chữ rời đúc bằng kim loại, sắp xếp lại được nhiều lần để in các văn bản khác nhau, một bước tiến quan trọng việc in sách. Sau đó, hàng triệu cuốn sách, tờ báo, tài liệu pháp lý đã được in bằng phương pháp này trong suốt nhiều thế kỷ.            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="assets/images/h9.png" alt="Johannes Gutenberg">
+                    <p class="image-caption">Johannes Gutenberg</p>
+                </div>
+            </div>
+            <p>
+            Thay vì bị lãng quên, in Typo ngày nay đã trở lại mạnh mẽ như một làn sóng nghệ thuật thủ công đầy tinh tế. Các nhà thiết kế đồ họa, nghệ sĩ và xưởng in độc lập đang tái khám phá sức hút của phương pháp in truyền thống này – nơi từng con chữ, từng đường nét để lại dấu ấn về thị giác khó tả. Với nhu cầu cá nhân hóa tăng cao, kỹ thuật in Typo hiện được ứng dụng trong các sản phẩm cao cấp như thiệp mời cưới, giấy chứng nhận, bìa sách thủ công, danh thiếp, lịch và các ấn phẩm trang trí phiên bản đặc biệt. Dấu ấn nổi của in Typo tạo ra hiệu ứng ba chiều tự nhiên trên giấy – một cảm giác sang trọng mà in kỹ thuật số thông thường khó có thể đạt được.            
+            <div class="image-container">
+              <div class="image-wrapper">
+                  <img src="assets/images/h10.jpg" alt="in Typo">
+                  <p class="image-caption text-align: center;">Các con chữ Typo</p>
+              </div>
+          </div>
+          </p>
+            <p>
+              Về kỹ thuật, in typo hiện đại kết hợp sắp chữ cổ điển với thiết kế số. Thay vì chữ rời truyền thống, nhiều xưởng dùng bản photopolymer từ file vector để in đa dạng hình dạng theo yêu cầu. Các máy in Typo bán tự động hoặc máy ép thủy lực được cải tiến về lực ép và độ chính xác, nhờ đó có thể in trên nhiều loại vật liệu như giấy mỹ thuật dày, bìa carton, vải bố, da nhân tạo,... Các hội nhóm yêu thích in Typo cũng thường xuyên tổ chức các workshop, chia sẻ kỹ thuật và kết nối tinh thần truyền thống với hơi thở đương đại.            
+              <div class="image-wrapper">
+                <img src="assets/images/h11.jpg" alt="Typography">
+                <p class="image-caption text-align: center;">Typography</p>
+            </div>
+            <p>
+              Không dừng lại ở nghệ thuật in ấn, kỹ thuật Typo còn đóng vai trò trong giáo dục thiết kế, nghiên cứu lịch sử văn hóa, và bảo tồn di sản in ấn. Việc giảng dạy sắp chữ thủ công giúp sinh viên mỹ thuật hiểu sâu sắc về cấu trúc chữ, tỷ lệ, không gian âm dương trong thiết kế – những yếu tố quan trọng nền tảng cho sáng tạo đồ họa hiện đại. Với sự kết hợp hài hòa giữa giá trị thủ công truyền thống và công nghệ sáng tạo, in Typo đang từng bước khẳng định vị trí bền vững trong ngành công nghiệp in cao cấp và nghệ thuật in ấn toàn cầu.          
+              <div class="image-wrapper">
+                <img src="assets/images/h12.jpg" alt="Typography">
+                <p class="image-caption text-align: center;">Nghệ thuật sắp chữ hiện đại</p>
+            </div>
+            </p>
+            <a href="index.html">&larr; Quay về trang chủ</a>
+            <a href="thang-3.html">Trang kế &rarr;</a>
+        </div>
+    </div>
 </body>
 </html>

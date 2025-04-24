@@ -1,17 +1,176 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tháng 4</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kỹ thuật in ống đồng – Độ chính xác cao và vai trò trọng yếu trong ngành bao bì hiện đại</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          font-family: 'EB Garamond', serif; /* Phông chữ cổ điển hơn */
+          background-image: url('assets/images/h8.jpg');
+          background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ nền */
+          background-repeat: no-repeat; /* Ngăn hình ảnh lặp lại */
+          background-position: center center; /* Căn giữa hình ảnh nền */
+          color: #333; /* Màu chữ tối hơn, dễ đọc trên nền ảnh */
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 20px;
+      }
+    
+      .container {
+          max-width: 900px;
+          background: rgba(255, 255, 255, 0.7); /* Nền trắng nhạt hơn cho chữ dễ đọc */
+          border: 1px solid rgba(0, 0, 0, 0.1); /* Viền nhạt */
+          border-radius: 8px;
+          padding: 40px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bóng nhẹ */
+      }
+      h1 {
+          font-family: 'Playfair Display', serif;
+          font-size: 2.5em; /* Chữ chủ đề lớn hơn */
+          color: #073c86; /* Màu nâu (saddlebrown) */
+          margin-bottom: 30px; /* Khoảng cách dưới rộng hơn */
+          text-align: center;
+          animation: fadeInDown 1s ease-out;
+      }
+      p {
+          font-size: 1.1em;
+          line-height: 1.7; /* Khoảng cách dòng vừa phải */
+          color: #555; /* Màu xám nhạt hơn */
+          text-align: justify;
+          animation: fadeIn 2s ease-in;
+          margin-bottom: 15px; /* Khoảng cách giữa các đoạn */
+      }
+      .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+      }
+      .image-wrapper {
+          flex: 1;
+          margin: 0 10px;
+          text-align: center;
+      }
+      .image-wrapper img {
+          max-width: 70%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng nhẹ cho ảnh */
+      }
+      .image-caption {
+          font-size: 0.9em;
+          color: #777;
+          margin-top: 5px;
+          text-align: center;
+      }
+      a {
+          display: inline-block;
+          margin-top: 30px;
+          text-decoration: none;
+          background-color: #8b4513; /* Màu nâu (saddlebrown) */
+          color: #fff;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+          animation: fadeInUp 2.5s;
+      }
+      a:hover {
+          background-color: #654321; /* Nâu đậm hơn khi hover */
+      }
+  
+      /* Animation effects */
+      @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
+      @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+  
+      /* Responsive */
+      @media (max-width: 600px) {
+          h1 {
+              font-size: 2em;
+              margin-bottom: 20px;
+          }
+          p {
+              font-size: 1em;
+              line-height: 1.6;
+              margin-bottom: 10px;
+          }
+          .container {
+              padding: 25px;
+          }
+          .image-container {
+              flex-direction: column; /* Chuyển ảnh xuống dòng khi màn hình nhỏ */
+          }
+          .image-wrapper {
+              margin: 10px 0;
+          }
+          .image-wrapper img {
+              max-width: 90%;
+          }
+      }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Tháng 4: Tiêu đề mẫu</h1>
-    <img src="assets/images/demo.jpg" alt="Ảnh minh họa" width="100%" />
-    <p>Đây là nội dung mẫu cho tháng 4. Bạn có thể thay đổi nội dung này theo lịch sử ngành bạn muốn thể hiện.</p>
-    <a href="index.html">← Quay về trang chủ</a>
-  </div>
+    <div class="overlay">
+        <div class="container">
+            <h1>KỸ THUẬT IN ỐNG ĐỒNG </h1>
+            <P>
+              <span style="font-size: 1.3em; font-weight: bold; color: #8b4513;">Độ chính xác cao và vai trò trọng yếu trong ngành bao bì hiện đại</span>
+          </P>
+            <p>
+              In ống đồng, còn gọi là in lõm (gravure printing), là một trong những kỹ thuật in chất lượng cao nhất hiện nay, nổi bật bởi khả năng in sắc nét, đồng đều và bền màu. Trong quá trình này, hình ảnh được khắc trực tiếp dưới dạng các ô lõm vào bề mặt trục kim loại – thường là đồng hoặc thép mạ đồng. Khi trục in được nhúng qua máng mực, các vùng lõm giữ lại mực in, sau đó truyền mực lên vật liệu in. Kỹ thuật này đặc biệt phù hợp với các hình ảnh có chi tiết nhỏ, sác nét, vùng chuyển sắc phức tạp và yêu cầu độ chính xác tuyệt đối, nên được ưa chuộng trong in bao bì và ấn phẩm cao cấp.            
+            </p>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="assets/images/h19.jpg" alt="Nguyên lí in ống đồng">
+                    <p class="image-caption">Nguyên lí in ống đồng</p>
+                </div>
+            </div>
+            <p>
+              Truyền thống, in ống đồng được sử dụng phổ biến trong ngành bao bì mềm, như bao gói thực phẩm, túi nhựa, màng nhôm, nhãn hàng tiêu dùng nhanh (FMCG), tem bưu chính và các loại nhãn chai mỹ phẩm. Nhờ tốc độ in cao và khả năng tương thích với các vật liệu khó như PET, BOPP hoặc màng phức hợp, kỹ thuật này duy trì vị thế then chốt trong các dây chuyền sản xuất lớn. In ống đồng nổi bật trong các ứng dụng cần in số lượng lớn với chất lượng hình ảnh sắc nét, màu sắc sống động, độ bền cao và khả năng in trên nhiều loại vật liệu khác nhau, đặc biệt là trong ngành bao bì mềm.
+            </p>
+              <div class="image-wrapper">
+                <img src="assets/images/17.jpg" alt="In bao bì mềm bằng phương pháp in ống đồng">
+                <p class="image-caption">In bao bì mềm bằng phương pháp in ống đồng</p>
+            </div>
+            <p>
+              Trong vài năm gần đây, công nghệ in ống đồng đã đạt được những bước tiến đột phá. Một trong số đó là khắc laser điện tử (Electromechanical Engraving – EME) cho phép khắc trục nhanh, chính xác đến từng micron, rút ngắn thời gian chế bản và kéo dài tuổi thọ trục. Một xu hướng nổi bật khác là in ống đồng kỹ thuật số (Hybrid Gravure) – kết hợp công nghệ khắc truyền thống với dữ liệu số, giúp in theo lô nhỏ mà vẫn đạt được độ nét và đồng đều như in số lượng lớn. Đây là giải pháp lý tưởng cho các chiến dịch marketing theo mùa, thiết kế cá nhân hóa hoặc bao bì thử nghiệm.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/16.jpg" alt="Khắc trục ống đồng bằng Lazer điện tử">
+              <p class="image-caption">Khắc trục ống đồng bằng Lazer điện tử</p>
+          </div>
+          <p>
+            Về mặt phát triển bền vững, ngành in ống đồng đang dần chuyển đổi từ mực in truyền thống sang mực in thân thiện với môi trường và mực sinh học, cùng với việc tái sử dụng trục in và cải tiến quy trình làm sạch, nhằm giảm phát thải hợp chất hữu cơ bay hơi (VOC) và bảo vệ môi trường. Các hệ thống in hiện đại còn được tích hợp các cảm biến kiểm soát mực tự động và điều khiển màu kỹ thuật số, nâng cao tính ổn định và giảm thiểu lãng phí nguyên vật liệu.  
+        </p>
+        <div class="image-wrapper">
+          <img src="assets/images/h15.jpg" alt="Trục in ống đồng">
+          <p class="image-caption">Trục in ống đồng</p>
+        </div>
+        <p>
+          Từ truyền thống đến đổi mới, in ống đồng tiếp tục giữ vị trí không thể thay thế trong ngành công nghiệp in hiện đại. Với sự hội tụ giữa tốc độ, độ chính xác và khả năng mở rộng ứng dụng, kỹ thuật này đang thích ứng linh hoạt với yêu cầu ngày càng khắt khe của thị trường toàn cầu – từ sản xuất hàng loạt đến cá nhân hóa, từ bao bì tiêu dùng đến ấn phẩm cao cấp bền vững
+        </p>
+            <a href="index.html">&larr; Quay về trang chủ</a>
+            <a href="thang-5.html">Trang kế &rarr;</a>
+        </div>
+    </div>
 </body>
 </html>

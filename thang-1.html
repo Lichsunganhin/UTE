@@ -1,92 +1,180 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tháng 1: Khởi đầu của men rượu</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: url('assets/images/ruou-truyen-thong.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-    }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-    }
-    .container {
-      max-width: 800px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      border-radius: 16px;
-      padding: 40px;
-      backdrop-filter: blur(10px);
-      transition: transform 0.3s ease;
-    }
-    .container:hover {
-      transform: scale(1.01);
-    }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #ffd700;
-      animation: fadeInDown 1s;
-    }
-    p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      animation: fadeIn 2s;
-    }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      text-decoration: none;
-      background-color: #ffd700;
-      color: #000;
-      padding: 10px 20px;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-      animation: fadeInUp 2.5s;
-    }
-    a:hover {
-      background-color: #ffbf00;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kỹ thuật in khắc gỗ – Cội nguồn của in ấn hiện đại</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          font-family: 'EB Garamond', serif; /* Phông chữ cổ điển hơn */
+          background-image: url('assets/images/h8.jpg');
+          background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ nền */
+          background-repeat: no-repeat; /* Ngăn hình ảnh lặp lại */
+          background-position: center center; /* Căn giữa hình ảnh nền */
+          color: #333; /* Màu chữ tối hơn, dễ đọc trên nền ảnh */
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 20px;
+      }
+    
+      .container {
+          max-width: 900px;
+          background: rgba(255, 255, 255, 0.7); /* Nền trắng nhạt hơn cho chữ dễ đọc */
+          border: 1px solid rgba(0, 0, 0, 0.1); /* Viền nhạt */
+          border-radius: 8px;
+          padding: 40px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bóng nhẹ */
+      }
+      h1 {
+          font-family: 'Playfair Display', serif;
+          font-size: 2.5em; /* Chữ chủ đề lớn hơn */
+          color: #073c86; /* Màu nâu (saddlebrown) */
+          margin-bottom: 30px; /* Khoảng cách dưới rộng hơn */
+          text-align: center;
+          animation: fadeInDown 1s ease-out;
+      }
+      p {
+          font-size: 1.1em;
+          line-height: 1.7; /* Khoảng cách dòng vừa phải */
+          color: #555; /* Màu xám nhạt hơn */
+          text-align: justify;
+          animation: fadeIn 2s ease-in;
+          margin-bottom: 15px; /* Khoảng cách giữa các đoạn */
+      }
+      .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+      }
+      .image-wrapper {
+          flex: 1;
+          margin: 0 10px;
+          text-align: center;
+      }
+      .image-wrapper img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng nhẹ cho ảnh */
+      }
+      .image-caption {
+          font-size: 0.9em;
+          color: #777;
+          margin-top: 5px;
+          text-align: center;
+      }
+      a {
+          display: inline-block;
+          margin-top: 30px;
+          text-decoration: none;
+          background-color: #8b4513; /* Màu nâu (saddlebrown) */
+          color: #fff;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+          animation: fadeInUp 2.5s;
+      }
+      a:hover {
+          background-color: #654321; /* Nâu đậm hơn khi hover */
+      }
+  
+      /* Animation effects */
+      @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
+      @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+  
+      /* Responsive */
+      @media (max-width: 600px) {
+          h1 {
+              font-size: 2em;
+              margin-bottom: 20px;
+          }
+          p {
+              font-size: 1em;
+              line-height: 1.6;
+              margin-bottom: 10px;
+          }
+          .container {
+              padding: 25px;
+          }
+          .image-container {
+              flex-direction: column; /* Chuyển ảnh xuống dòng khi màn hình nhỏ */
+          }
+          .image-wrapper {
+              margin: 10px 0;
+          }
+          .image-wrapper img {
+              max-width: 90%;
+          }
+      }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="container">
-      <h1>Tháng 1: Khởi đầu của men rượu</h1>
-      <p>
-        Rượu truyền thống Việt Nam đã có từ hàng ngàn năm trước, gắn liền với đời sống tinh thần và văn hóa dân gian. Từ vùng đồng bằng sông Hồng đến cao nguyên Tây Bắc, mỗi nơi đều có cách nấu rượu riêng.
-        <br><br>
-        Vào tháng Giêng, khi không khí xuân mơi ngập tràn, làng quê Việt Nam lại rộn ràng mùi men rượu nồng đắm, đó là lúc người ta tôn vinh những tinh hoa nghề nàu rượu qua bao đời.
-      </p>
-      <a href="index.html">&larr; Quay về trang chủ</a>
+    <div class="overlay">
+        <div class="container">
+            <h1>KỸ THUẬT IN KHẮC GỖ</h1>
+            <P>
+              <span style="font-size: 1.3em; font-weight: bold; color: #8b4513;">Cội nguồn của in ấn hiện đại</span>
+          </P>
+            <p>
+                Kỹ thuật in khắc gỗ là một trong những phương pháp in lâu đời nhất trong lịch sử nhân loại, có nguồn gốc từ Trung Quốc vào khoảng thế kỷ thứ VII sau Công nguyên. Phương pháp này dựa trên nguyên lý khắc ngược nội dung cần in (hình ảnh, chữ viết) lên một tấm gỗ, sau đó lăn mực lên phần khắc nổi và ép trực tiếp lên giấy hoặc vải. Mặc dù có giới hạn về độ chính xác và tốc độ sản xuất nhưng phương pháp này từng là công cụ truyền bá tư tưởng, văn hóa và kiến thức chủ đạo suốt hàng thế kỷ tại châu Á và châu Âu.
+            </p>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="assets/images/h2.jpg" alt="Các công cụ khắc gỗ truyền thống">
+                    <p class="image-caption">Công cụ khắc gỗ</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/images/h1.jpg" alt="Các công cụ in khắc gỗ">
+                    <p class="image-caption">Công cụ in</p>
+                </div>
+            </div>
+            <p>
+                Tại Nhật Bản, kỹ thuật in khắc gỗ còn phát triển thành một dạng nghệ thuật đặc sắc gọi là "Ukiyo-e", với những bức tranh nổi tiếng khắp thế giới như tác phẩm "Sóng lừng ngoài khơi Kanagawa".
+            </p>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="assets/images/h3.jpg" alt="Sóng lừng ngoài khơi Kanagawa" style="max-width: 60%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <p style="font-size: 0.9em; color: #777; margin-top: 5px;text-align: center;">Sóng lừng ngoài khơi Kanagawa</p>
+           </div>
+            <p>
+                Còn ở Việt Nam, kỹ thuật này đã tạo nên dòng tranh khắc gỗ dân gian Đông Hồ cực kỳ nổi tiếng, xuất phát từ làng Đông Hồ (phường Song Hồ, thị xã Thuận Thành, tỉnh Bắc Ninh). Tranh Đông Hồ không chỉ là Di sản văn hóa phi vật thể cấp Quốc gia mà còn là một phần của lịch sử ngành in Việt Nam.
+            </p>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="assets/images/h4.jpg" alt="Bản khắc gỗ tranh đông hồ">
+                    <p class="image-caption text-align: center;">Bản khắc gỗ tranh Đông Hồ</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/images/h5.jpg" alt="Nghề tranh khắc gỗ">
+                    <p class="image-caption text-align: center;">Tranh khắc gỗ</p>
+                </div>
+            </div>
+            <p>
+                Trong thời đại hiện đại, in khắc gỗ không còn giữ vai trò sản xuất hàng loạt như trước, nhưng lại hồi sinh mạnh mẽ trong lĩnh vực nghệ thuật, thiết kế đồ họa và giáo dục. Thành tựu đáng kể trong thế kỷ 21 là việc kết hợp kỹ thuật in khắc gỗ với công nghệ hiện đại như cắt laser và khắc CNC. Thay vì khắc tay tốn công, nghệ nhân có thể thiết kế bản in bằng phần mềm đồ họa và khắc chính xác bằng máy móc. Ứng dụng thực tế còn bao gồm in bao bì thủ công cao cấp, nhãn mỹ nghệ, quà lưu niệm và thiết kế nội thất độc bản – nơi giá trị thủ công và yếu tố truyền thống được đề cao.
+            </p>
+            <a href="index.html">&larr; Quay về trang chủ</a>
+              <a href="thang-2.html">Trang kế &rarr;</a>
+          </div>
+        </div>
     </div>
-  </div>
 </body>
 </html>

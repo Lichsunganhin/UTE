@@ -1,17 +1,172 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tháng 5</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kỹ thuật in ống đồng – Độ chính xác cao và vai trò trọng yếu trong ngành bao bì hiện đại</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          font-family: 'EB Garamond', serif; /* Phông chữ cổ điển hơn */
+          background-image: url('assets/images/h8.jpg');
+          background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ nền */
+          background-repeat: no-repeat; /* Ngăn hình ảnh lặp lại */
+          background-position: center center; /* Căn giữa hình ảnh nền */
+          color: #333; /* Màu chữ tối hơn, dễ đọc trên nền ảnh */
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 20px;
+      }
+    
+      .container {
+          max-width: 900px;
+          background: rgba(255, 255, 255, 0.7); /* Nền trắng nhạt hơn cho chữ dễ đọc */
+          border: 1px solid rgba(0, 0, 0, 0.1); /* Viền nhạt */
+          border-radius: 8px;
+          padding: 40px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Bóng nhẹ */
+      }
+      h1 {
+          font-family: 'Playfair Display', serif;
+          font-size: 2.5em; /* Chữ chủ đề lớn hơn */
+          color: #073c86; /* Màu nâu (saddlebrown) */
+          margin-bottom: 30px; /* Khoảng cách dưới rộng hơn */
+          text-align: center;
+          animation: fadeInDown 1s ease-out;
+      }
+      p {
+          font-size: 1.1em;
+          line-height: 1.7; /* Khoảng cách dòng vừa phải */
+          color: #555; /* Màu xám nhạt hơn */
+          text-align: justify;
+          animation: fadeIn 2s ease-in;
+          margin-bottom: 15px; /* Khoảng cách giữa các đoạn */
+      }
+      .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0;
+      }
+      .image-wrapper {
+          flex: 1;
+          margin: 0 10px;
+          text-align: center;
+      }
+      .image-wrapper img {
+          max-width: 70%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng nhẹ cho ảnh */
+      }
+      .image-caption {
+          font-size: 0.9em;
+          color: #777;
+          margin-top: 5px;
+          text-align: center;
+      }
+      a {
+          display: inline-block;
+          margin-top: 30px;
+          text-decoration: none;
+          background-color: #8b4513; /* Màu nâu (saddlebrown) */
+          color: #fff;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+          animation: fadeInUp 2.5s;
+      }
+      a:hover {
+          background-color: #654321; /* Nâu đậm hơn khi hover */
+      }
+  
+      /* Animation effects */
+      @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
+      @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+  
+      /* Responsive */
+      @media (max-width: 600px) {
+          h1 {
+              font-size: 2em;
+              margin-bottom: 20px;
+          }
+          p {
+              font-size: 1em;
+              line-height: 1.6;
+              margin-bottom: 10px;
+          }
+          .container {
+              padding: 25px;
+          }
+          .image-container {
+              flex-direction: column; /* Chuyển ảnh xuống dòng khi màn hình nhỏ */
+          }
+          .image-wrapper {
+              margin: 10px 0;
+          }
+          .image-wrapper img {
+              max-width: 90%;
+          }
+      }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Tháng 5: Tiêu đề mẫu</h1>
-    <img src="assets/images/demo.jpg" alt="Ảnh minh họa" width="100%" />
-    <p>Đây là nội dung mẫu cho tháng 5. Bạn có thể thay đổi nội dung này theo lịch sử ngành bạn muốn thể hiện.</p>
-    <a href="index.html">← Quay về trang chủ</a>
-  </div>
+    <div class="overlay">
+        <div class="container">
+            <h1>KỸ THUẬT IN OFFSET</h1>
+            <P>
+              <span style="font-size: 1.3em; font-weight: bold; color: #8b4513;">Tính linh hoạt và chất lượng vượt trội trong ngành in ấn hiện đại</span>
+           </P>
+            <p>
+              In Offset là một kỹ thuật in phẳng, phần tử in và phần tử không in gần như nằm trên cùng một mặt phẳng. Nguyên lý hoạt động của kỹ thuật này dựa trên sự phân tách giữa mực và nước, với mực in bám vào các vùng phần tử in, trong khi các vùng không in giữ nước. Hình ảnh được truyền từ bản kẽm lên lô cao su (blanket) rồi mới đến vật liệu in. Phương pháp này mang lại độ chính xác cao, tái tạo chi tiết tốt và màu sắc ổn định, đặc biệt phù hợp với sản lượng lớn. Đây là công nghệ in ấn thương mại phổ biến nhất hiện nay.
+            </p>
+             <p> 
+              Ứng dụng của in Offset rất rộng rãi, bao gồm: in sách, báo, tạp chí, lịch, bao bì giấy, nhãn mác, brochure, catalogue, và các ấn phẩm quảng cáo. Công nghệ này cho phép in trên nhiều loại vật liệu như: giấy couche, giấy offset, giấy mỹ thuật, nhựa mỏng (synthetic paper), carton duplex, metalized paper, và cả kim loại mỏng (metal sheets), tùy vào cấu hình máy và hệ thống cấp giấy.
+            </p>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="assets/images/h22.jpg" alt="Nguyên lí In Offset">
+                    <p class="image-caption">Nguyên lí In Offset</p>
+                </div>
+            </div>
+            <p>
+              Trong những năm gần đây, công nghệ in Offset đã có những bước phát triển vượt bậc nhờ vào việc ứng dụng hệ thống Computer-to-Plate (CTP), giúp rút ngắn đáng kể thời gian chuẩn bị và nâng cao hiệu quả sản xuất. Mặc dù CTP đã thay thế phần lớn vai trò của CTF trong in offset, nhưng CTF vẫn chưa hoàn toàn biến mất, mà tiếp tục được sử dụng trong một số công nghệ in đặc thù hoặc các kỹ thuật thủ công yêu cầu tính linh hoạt và kiểm soát cao trong quá trình tạo bản in.
+            </p>
+              <div class="image-wrapper">
+                <img src="assets/images/h20.jpg" alt="Hệ thống in offset">
+                <p class="image-caption">Hệ thống in offset</p>
+            </div>
+            <p>
+              Với sự phát triển vượt bậc của công nghệ hiện đại các hệ thống in Offset còn được tích hợp thêm các đơn vị phủ UV, tráng phủ, hệ thống sấy hồng ngoại, in mực đặc biệt, tạo ra ấn phẩm có hiệu ứng cao cấp và độ bền vượt trội. Những cải tiến này không chỉ phù hợp với in số lượng lớn, mà còn mở rộng ứng dụng sang bao bì cao cấp và in cá nhân hóa với đơn hàng linh hoạt.
+           </p>
+            <div class="image-wrapper">
+              <img src="assets/images/h43.jpg" alt="Hệ thống in offset">
+              <p class="image-caption">Hệ thống in offset</p>
+          </div>
+          <p>
+            Một thành tựu ấn tượng gần đây trong lĩnh vực in Offset là khả năng in tốc độ cao lên tới 21.000 tờ/h, như được công bố bởi các nhà sản xuất máy in hiện đại. Điều này chứng tỏ sự phát triển mạnh mẽ trong công nghệ và khả năng nâng cao năng suất, phục vụ nhu cầu in ấn với khối lượng lớn và yêu cầu chất lượng vượt trội.
+          </p>
+            <a href="index.html">&larr; Quay về trang chủ</a>
+            <a href="thang-6.html">Trang kế &rarr;</a>
+        </div>
+    </div>
 </body>
 </html>
