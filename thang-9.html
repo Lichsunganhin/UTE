@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Kỹ thuật in Flexo</title>
+    <title>Xu hướng ngành in </title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
     <style>
       * {
@@ -13,7 +13,7 @@
       }
       body {
           font-family: 'EB Garamond', serif; /* Phông chữ cổ điển hơn */
-          background-image: url('assets/images/h8.jpg');
+          background-image: url('assets/images/h8.jpg'); /* Giữ ảnh nền cũ */
           background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ nền */
           background-repeat: no-repeat; /* Ngăn hình ảnh lặp lại */
           background-position: center center; /* Căn giữa hình ảnh nền */
@@ -36,7 +36,7 @@
       h1 {
           font-family: 'Playfair Display', serif;
           font-size: 2.5em; /* Chữ chủ đề lớn hơn */
-          color: #073c86; /* Màu nâu (saddlebrown) */
+          color: #073c86; /* Màu chủ đề của bạn */
           margin-bottom: 30px; /* Khoảng cách dưới rộng hơn */
           text-align: center;
           animation: fadeInDown 1s ease-out;
@@ -49,19 +49,20 @@
           animation: fadeIn 2s ease-in;
           margin-bottom: 15px; /* Khoảng cách giữa các đoạn */
       }
-      .image-container {
+      /* Các style cũ của .image-container và .image-wrapper được giữ lại nhưng sẽ bị ghi đè bởi .image-grid khi cần */
+      .image-container { /* This specific class is for single image display */
           display: flex;
           justify-content: center;
           align-items: center;
           margin: 20px 0;
       }
-      .image-wrapper {
-          flex: 1;
+      .image-wrapper { 
+          flex: 1; 
           margin: 0 10px;
           text-align: center;
       }
       .image-wrapper img {
-          max-width: 60%;
+          max-width: 60%; 
           height: auto;
           border-radius: 8px;
           box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng nhẹ cho ảnh */
@@ -87,7 +88,7 @@
       a:hover {
           background-color: #654321; /* Nâu đậm hơn khi hover */
       }
-  
+    
       /* Animation effects */
       @keyframes fadeInDown {
           from { opacity: 0; transform: translateY(-30px); }
@@ -101,7 +102,33 @@
           from { opacity: 0; transform: translateY(30px); }
           to { opacity: 1; transform: translateY(0); }
       }
-  
+    
+      /* CSS CHO LƯỚI ẢNH 2X2 */
+      .image-grid {
+          display: grid; /* Sử dụng CSS Grid Layout */
+          grid-template-columns: repeat(2, 1fr); /* Tạo 2 cột bằng nhau */
+          gap: 20px; /* Khoảng cách giữa các ảnh */
+          margin: 30px 0; /* Khoảng cách trên/dưới cho khối ảnh grid */
+      }
+
+      .image-grid .image-wrapper {
+          margin: 0; /* Loại bỏ margin cũ để không bị chồng chéo với gap */
+          flex: none; /* Vô hiệu hóa flex cũ nếu có */
+      }
+
+      .image-grid .image-wrapper img {
+          max-width: 100%; /* Cho phép ảnh chiếm toàn bộ chiều rộng của grid item */
+          height: 200px; /* Đặt chiều cao cố định để các ảnh đều nhau (có thể điều chỉnh) */
+          object-fit: contain; /* Đảm bảo ảnh hiển thị toàn bộ trong khung */
+          background-color: #f0f0f0; /* Nền nhẹ cho ảnh có nền trong suốt hoặc không lấp đầy */
+      }
+      .image-grid .image-caption {
+          font-size: 0.9em;
+          color: #777;
+          margin-top: 5px;
+          text-align: center;
+      }
+    
       /* Responsive */
       @media (max-width: 600px) {
           h1 {
@@ -116,61 +143,66 @@
           .container {
               padding: 25px;
           }
-          .image-container {
-              flex-direction: column; /* Chuyển ảnh xuống dòng khi màn hình nhỏ */
+          .image-container { 
+              flex-direction: column; 
           }
-          .image-wrapper {
+          .image-wrapper { 
               margin: 10px 0;
           }
           .image-wrapper img {
               max-width: 90%;
           }
+
+          /* Responsive cho lưới ảnh */
+          .image-grid {
+              grid-template-columns: 1fr; /* 1 cột trên màn hình nhỏ */
+              gap: 15px; /* Giảm khoảng cách cho màn hình nhỏ */
+          }
+          .image-grid .image-wrapper img {
+            height: auto; /* Chiều cao tự động để ảnh không bị cắt quá nhiều trên mobile */
+          }
       }
-  </style>
+    </style>
 </head>
 <body>
     <div class="overlay">
         <div class="container">
-            <h1>CÔNG NGHỆ IN 3D</h1>
+            <h1>Xu hướng ngành in </h1>
             <P>
               <span style="font-size: 1.3em; font-weight: bold; color: #8b4513;">Tạo hình độc bản, mở ra giới hạn của thiết kế</span>
-          </P>
+            </P>
             <p>
-              Công nghệ in 3D, là quá trình tạo ra vật thể ba chiều bằng cách xếp chồng các lớp vật liệu theo thiết kế kỹ thuật số. Từ chỗ khởi đầu như một công cụ tạo mẫu nhanh trong công nghiệp, in 3D ngày nay đã trở thành một phần không thể thiếu trong chuỗi giá trị sản xuất – đặc biệt trong lĩnh vực thiết kế bao bì, sản xuất in ấn và in nghệ thuật.
+              Dưới áp lực đổi mới và phát triển bền vững, ngành in hiện đại đang chuyển mình mạnh mẽ để đáp ứng những đòi hỏi ngày càng cao từ người tiêu dùng.  Một trong những xu hướng nổi bật là cá nhân hóa sản phẩm thông qua công nghệ in dữ liệu biến đổi (Variable Data Printing - VDP).  Với công nghệ này, từng bản in có thể được thiết kế riêng biệt theo từng đối tượng khách hàng – từ tên, hình ảnh đến nội dung cá nhân hóa – mà không làm gián đoạn quy trình sản xuất hàng loạt.  Điều này đặc biệt phù hợp với các chiến dịch tiếp thị, thiệp mời, nhãn hàng hoặc bao bì sản phẩm cần tạo dấu ấn cá nhân, tăng sự tương tác và kết nối cảm xúc giữa thương hiệu và người tiêu dùng. 
             </p>
-            <div class="image-container">
-                <div class="image-wrapper">
-                    <img src="assets/images/h34.jpg" alt="Công nghệ in 3D">
-                    <p class="image-caption">Công nghệ in 3D</p>
-                </div>
-            </div>
-            <p>
-              Trong ngành in, in 3D được ứng dụng mạnh mẽ trong thiết kế và tạo mẫu hộp bao bì. Các công ty in sử dụng in 3D để tạo ra các mô hình hộp, vỏ sản phẩm, vật phẩm quảng cáo, nhãn dập nổi hoặc các mẫu mockup mang tính tương tác cao, giúp khách hàng trực quan hóa sản phẩm trước khi đưa vào sản xuất hàng loạt. Điều này rút ngắn thời gian phê duyệt thiết kế, giảm chi phí chế tạo khuôn mẫu truyền thống và mở ra cơ hội cá nhân hóa sản phẩm theo đơn hàng nhỏ – một xu hướng đang phát triển mạnh mẽ trong ngành in thương mại.
             </p>
               <div class="image-wrapper">
-                <img src="assets/images/h35.jpg" alt="Công nghệ in 3D">
-                <p class="image-caption">Công nghệ in 3D</p>
+                <img src="assets/images/coca.PNG" alt="1">
+                <p class="image-caption"></p>
             </div>
             <p>
-              Ngoài ra, in 3D còn được ứng dụng để chế tạo các linh kiện thay thế cho máy in hoặc các chi tiết cơ khí tùy chỉnh như bánh răng, gạt mực, gá đỡ, giúp các nhà in tiết kiệm thời gian chờ nhập linh kiện. Đặc biệt, một số đơn vị in cao cấp còn sử dụng in 3D để sản xuất khuôn ép nổi, khuôn phủ UV, khuôn phủ nhũ dạng 3D, nhờ khả năng tạo hình chính xác và phức tạp, phù hợp với các thiết kế độc đáo, sáng tạo.
+              Cùng lúc đó, ngành in cũng đang tích cực theo đuổi mục tiêu phát triển bền vững và in xanh.  Ngày càng nhiều doanh nghiệp ưu tiên sử dụng mực in sinh thái, có nguồn gốc từ thực vật hoặc các chất ít độc hại, giúp giảm thiểu ô nhiễm và an toàn cho người dùng.  Giấy có nguồn gốc FSC (Forest Stewardship Council) cũng được lựa chọn nhiều hơn nhờ đảm bảo nguyên liệu được khai thác từ rừng được quản lý bền vững, bảo vệ môi trường và quyền lợi cộng đồng địa phương.  Đây là minh chứng rõ ràng cho cam kết của ngành in đối với môi trường và trách nhiệm xã hội. 
             </p>
-            <P>
-              Công nghệ in resin độ phân giải cao (DLP, SLA) đã mở ra khả năng chế tạo khuôn với độ chi tiết tới micron, giúp rút ngắn thời gian sản xuất từ vài ngày xuống chỉ còn vài giờ. Một số dòng máy in 3D công nghiệp như Stratasys J55, Formlabs Fuse, hay HP Multi Jet Fusion còn tích hợp hệ thống kiểm soát màu sắc và kết cấu bề mặt, cho phép tạo mẫu bao bì và vật phẩm với độ tương đồng gần như sản phẩm thực tế.
-            </P>
-            <div class="image-wrapper">
-              <img src="assets/images/h36.jpg" alt="Công nghệ in 3D">
-              <p class="image-caption">Công nghệ in 3D</p>
-          </div>
-          <p>
-            Không chỉ dừng lại ở tạo mẫu, công nghệ in 3D còn được ứng dụng trong in bao bì năng lượng – như pin dẻo, OLED linh hoạt, cảm biến sinh học in dạng lớp mỏng, đặc biệt thông qua kỹ thuật in 3D bằng vật liệu chức năng. Một số nghiên cứu đang khai thác in 3D để tạo ra các cấu trúc siêu nhẹ, vật liệu tái chế sinh học, hướng đến giải pháp bao bì bền vững trong tương lai.
-          </p>
-          <div class="image-wrapper">
-            <img src="assets/images/h37.jpeg" alt="Công nghệ in 3D">
-            <p class="image-caption">Công nghệ in 3D</p>
-        </div>
-        <P>
-          Nhờ tính linh hoạt, tốc độ tạo mẫu nhanh, khả năng cá nhân hóa cao và tích hợp dễ dàng với các quy trình in truyền thống, công nghệ in 3D đang trở thành cánh tay nối dài sáng tạo cho các nhà thiết kế, kỹ sư in và đơn vị sản xuất bao bì trong kỷ nguyên công nghiệp số hóa
-        </P>
+            </p>
+              <div class="image-wrapper">
+                <img src="assets/images/c2.jpg" alt="2">
+                <p class="image-caption"></p>
+            </div>
+            <p>
+              Một số đơn vị còn ứng dụng nhãn RFID để kiểm soát và minh bạch hóa nguồn gốc vật liệu in, cũng như đánh giá mức độ thân thiện với môi trường của sản phẩm.  Nhờ khả năng truyền dữ liệu không dây, RFID được sử dụng rộng rãi trong nhiều lĩnh vực.  Trong quản lý kho bãi và chuỗi cung ứng, công nghệ này giúp theo dõi hàng hóa nhanh chóng, chính xác.  Trong bán lẻ, RFID hỗ trợ nhận dạng sản phẩm và phòng chống trộm cắp.  Ngoài ra, RFID còn giúp xác thực nguồn gốc, chống hàng giả và tự động hóa quy trình kiểm kê, kiểm soát ra vào. 
+            </p>
+            </p>
+              <div class="image-wrapper">
+                <img src="assets/images/c4.jpg" alt="3">
+                <p class="image-caption"></p>
+            </div>
+            <p>
+              Không dừng lại ở đó, việc tích hợp công nghệ cao đang mở ra một kỷ nguyên mới cho ngành in.  Các giải pháp thực tế tăng cường (AR) đang được áp dụng vào bao bì, nhãn hàng cho phép người dùng tương tác số trực tiếp bằng cách quét mã hoặc hình ảnh để xem video, đồ họa 3D hoặc nội dung mở rộng.  Cùng với đó là bao bì thông minh, sử dụng chip NFC hoặc mã QR để truy xuất nguồn gốc, xác thực hàng hóa, cung cấp thông tin sản phẩm và tương tác với khách hàng theo thời gian thực.  Tất cả những xu hướng này – từ cá nhân hóa, in xanh đến tích hợp công nghệ – đang góp phần định hình một ngành in hiện đại, linh hoạt, bền vững và gắn liền với trải nghiệm người dùng trong kỷ nguyên số. 
+            </p>
+            </p>
+              <div class="image-wrapper">
+                <img src="assets/images/c3.jpg" alt="4">
+                <p class="image-caption"></p>
+            </div>
             <a href="index.html">&larr; Quay về trang chủ</a>
             <a href="thang-10.html">Trang kế &rarr;</a>
         </div>
